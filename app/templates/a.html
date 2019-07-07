@@ -61,10 +61,30 @@
 			
 	</div>
 
-
 <script type="text/javascript">
-	// your solution here
-
+	$(document).ready(function(){
+    
+    $(".p2-circle.bg-purple").click(function(){
+      $(".p2-circle.bg-purple").hide(1000);
+    });
+    
+    $(".p2-circle.bg-green").click(function(){
+      $(".p2-circle.bg-green, .p2-circle.bg-blue").hide(1000);
+    });
+    
+    $(".p2-circle.bg-orange").click(function(){
+      $(".p2-circle.bg-orange").not($(this)).hide(1000)
+    });
+    
+    $("#gradient-circle").hover(
+      function(){
+        $(this).hide(1000);
+    });
+    
+    $("button").click(function(){
+      $(".shape-container").children().show();
+    });
+  });
 </script>
 </body>
 </html>
